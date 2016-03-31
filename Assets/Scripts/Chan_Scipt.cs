@@ -10,9 +10,12 @@ public class Chan_Scipt : MonoBehaviour {
     private float inputH;
     private float inputV;
     private bool run;
-  
-	// Use this for initialization
-	void Start () {
+
+    private Quaternion qTo;
+    public float speed = 2.0f;
+
+    // Use this for initialization
+    void Start () {
         ani = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody>();
         run = false;

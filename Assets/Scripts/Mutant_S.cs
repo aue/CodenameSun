@@ -8,9 +8,8 @@ public class Mutant_S : MonoBehaviour
 
     public Rigidbody rbody;
 
-    private float inputH;
-    private float inputV;
-    private bool run;
+    private Quaternion qTo;
+    public float speed = 2.0f;
 
     //private bool roll;
     // Use this for initialization
@@ -18,13 +17,22 @@ public class Mutant_S : MonoBehaviour
     {
         ani = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody>();
-        run = false;
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        ani.SetFloat("inputV", Input.GetAxis("Vertical"));
+        ani.SetFloat("inputV", Input.GetAxis("Horizontal"));
+
+        Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
+
+        if (direction != Vector2.zero)
+            qTo = Quaternion.LookRotation(direction);
+        Vector3 pos = transform.position;
+        pos.z = 0;
+        transform.position = pos;
+        transform.rotation = Quaternion.Slerp(transform.rotation, qTo, Time.deltaTime * speed);
 
         //Jumping mechanism
         if (Input.GetButtonDown("Jump"))
@@ -33,36 +41,7 @@ public class Mutant_S : MonoBehaviour
             Invoke("StopJumping", 0.1f);
         }
 
-        //Turnning Left
-        if (Input.GetKey("q"))
-        {
-            transform.Rotate(Vector3.down * Time.deltaTime * 100.0f);
-
-            if((Input.GetAxis("Vertical") == 0f) && (Input.GetAxis("Horizontal") == 0f))
-            {
-                ani.SetBool("TurnLeft", true);
-            }
-
-        }
-        else
-        {
-            ani.SetBool("TurnLeft", false);
-        }
-        //Turn Right
-        if (Input.GetKey("e"))
-        {
-            transform.Rotate(Vector3.up * Time.deltaTime * 100.0f);
-
-            if ((Input.GetAxis("Vertical") == 0f) && (Input.GetAxis("Horizontal") == 0f))
-            {
-                ani.SetBool("TurnRight", true);
-            }
-            
-        }
-        else
-        {
-            ani.SetBool("TurnRight", false);
-        }
+        
         //================================
         //Actions
 

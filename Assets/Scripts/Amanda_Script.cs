@@ -1,98 +1,69 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Amanda_Script : MonoBehaviour {
-
-    public Animator ani;
-
-    public Rigidbody rbody;
-
-    private float inputH;
-    private float inputV;
-    private bool run;
-    private bool goggle;
-    //private bool roll;
+public class Amanda_Script : MonoBehaviour
+{
+    private Animator myAnimator;
+    private Quaternion qTo;
+    public float speed = 2.0f;
     // Use this for initialization
-    void Start () {
-        ani = GetComponent<Animator>();
-        rbody = GetComponent<Rigidbody>();
-        run = false;
-        goggle = false;
+    void Start()
+    {
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    int n = Random.Range(0, 2);
-        //    if (n == 0)
-        //    {
-        //        ani.Play("DAMAGED00", -1, 0f);
-        //    }
-        //    else
-        //    {
-        //        ani.Play("DAMAGED01", -1, 0f);
-        //    }
-        //}
+        myAnimator.SetFloat("VSpeed", Input.GetAxis("Horizontal"));
 
-        // ========================================
-        // this is for running 
-        if (Input.GetKey(KeyCode.LeftShift))
+        Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
+
+        if (direction != Vector2.zero)
+            qTo = Quaternion.LookRotation(direction);
+        Vector3 pos = transform.position;
+        pos.z = 0;
+        transform.position = pos;
+        transform.rotation = Quaternion.Slerp(transform.rotation, qTo, Time.deltaTime * speed);
+
+        if (Input.GetButtonDown("Jump"))
         {
-            run = true;
+            myAnimator.SetBool("Jumping", true);
+            Invoke("StopJumping", 0.1f);
+        }
+
+        //Actions for the Character
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (myAnimator.GetInteger("CurrentAction") == 0)
+            {
+                myAnimator.SetInteger("CurrentAction", 1);
+            }
+
+        }
+        
+        else if (Input.GetKeyDown("1"))
+        {
+            if (myAnimator.GetInteger("CurrentAction") == 0)
+            {
+                myAnimator.SetInteger("CurrentAction", 2);
+            }
+
+        }
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            if (myAnimator.GetInteger("CurrentAction") == 0)
+            {
+                myAnimator.SetInteger("CurrentAction", 5);
+            }
         }
         else
         {
-            run = false;
+            myAnimator.SetInteger("CurrentAction", 0);
         }
-
-        //=======================================
-        // this is for jumping
-        if (Input.GetKey(KeyCode.Space))
-        {
-            ani.SetBool("jump", true);
-
-
-        }
-        else
-        {
-            ani.SetBool("jump", false);
-        }
-        //==========================================
-        //this is for crouching 
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            ani.SetBool("crouch", true);
-
-
-        }
-        else
-        {
-            ani.SetBool("crouch", false);
-        }
-        inputH = Input.GetAxis("Horizontal");
-        inputV = Input.GetAxis("Vertical");
-
-        ani.SetFloat("inputH", inputH);
-        ani.SetFloat("inputV", inputV);
-        ani.SetBool("run", run);
-
-        float moveX = inputH * 20f * Time.deltaTime;
-        float moveZ = inputV * 50f * Time.deltaTime;
-        if (moveZ <= 0f)
-        {
-            moveX = 0f;
-        }
-        else if (run)
-        {
-            moveX *= 3f;
-            moveZ *= 3f;
-        }
-        rbody.velocity = new Vector3(moveX, 0f, moveZ);
     }
-
+    void StopJumping()
+    {
+        myAnimator.SetBool("Jumping", false);
+    }
 }
-
-
-    
