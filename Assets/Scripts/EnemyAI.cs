@@ -82,6 +82,7 @@ public class EnemyAI : MonoBehaviour
 
     void Patrolling()
     {
+        Debug.Log(wayPointIndex + "is the way point index");
         //Set an appropriate speed for the NavMeshAgent
         nav.speed = patrolSpeed;
 
