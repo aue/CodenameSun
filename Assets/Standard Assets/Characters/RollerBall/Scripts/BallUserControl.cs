@@ -41,7 +41,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             // Get the axis and jump input.
 
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+			float v = CrossPlatformInputManager.GetAxis ("Vertical");
             jump = CrossPlatformInputManager.GetButton("Jump");
 
             // calculate move direction
@@ -54,7 +54,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             else
             {
                 // we use world-relative directions in the case of no main camera
-                move = (v*Vector3.forward + h*Vector3.right).normalized;
+				move = ((v*Vector3.forward)/4 + h*Vector3.right).normalized;
             }
         }
 
