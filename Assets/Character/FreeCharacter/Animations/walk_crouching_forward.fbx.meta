@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ad52a39f667f5314f80290d726c717a3
-timeCreated: 1457588403
+timeCreated: 1460767476
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -116,7 +116,7 @@ ModelImporter:
     400106: Body_01
     400108: //RootNode
     4300000: Body_01
-    7400000: walk_crouch_foward_black_mask
+    7400000: black_mask_crouch_fowrd
     9500000: //RootNode
     13700000: Body_01
   materials:
@@ -143,7 +143,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: walk_crouch_foward_black_mask
+      name: black_mask_crouch_fowrd
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 30
@@ -1073,7 +1073,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 7d3425a6c7317e048be11c2ff72db69e,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3b3d1630d3f5bbb4d8d0a684132c4753,
     type: 3}
   animationType: 3
   humanoidOversampling: 1
