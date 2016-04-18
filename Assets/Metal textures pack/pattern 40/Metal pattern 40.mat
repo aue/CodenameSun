@@ -33,11 +33,11 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: 0.104477614
+        second: 0.42
       data:
         first:
           name: _Shininess
-        second: 0.15685356
+        second: 0.01
     m_Colors:
       data:
         first:

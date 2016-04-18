@@ -21,7 +21,7 @@ public class Robot_Script : MonoBehaviour {
         if (direction != Vector2.zero)
             qTo = Quaternion.LookRotation(direction);
         Vector3 pos = transform.position;
-        pos.z = 0;
+        //pos.z = 0;
         transform.position = pos;
         transform.rotation = Quaternion.Slerp(transform.rotation, qTo, Time.deltaTime * speed);
 
