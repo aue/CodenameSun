@@ -54,7 +54,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			CheckGroundStatus();
 			move = Vector3.ProjectOnPlane(move, m_GroundNormal);
 			m_TurnAmount = Mathf.Atan2(move.x, move.z);
-			m_ForwardAmount = move.x;
+			m_ForwardAmount = move.z;
 
 			ApplyExtraTurnRotation();
 

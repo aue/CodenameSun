@@ -23,10 +23,15 @@ public class StartOptions : MonoBehaviour {
 	private PlayMusic playMusic;										//Reference to PlayMusic script
 	private float fastFadeIn = .01f;									//Very short fade time (10 milliseconds) to start playing music immediately without a click/glitch
 	private ShowPanels showPanels;										//Reference to ShowPanels script on UI GameObject, to show and hide panels
+	private GameObject[] uisys;
 
-	
 	void Awake()
 	{
+		uisys = GameObject.FindGameObjectsWithTag("UI");
+		if (uisys.Length != 1) {
+			Destroy (GameObject.Find("UI"));
+		}
+
 		//Get a reference to ShowPanels attached to UI object
 		showPanels = GetComponent<ShowPanels> ();
 
@@ -34,6 +39,27 @@ public class StartOptions : MonoBehaviour {
 		playMusic = GetComponent<PlayMusic> ();
 	}
 
+
+	public void StartLevel1() {
+		sceneToStart = 1;
+		StartButtonClicked ();
+	}
+
+	public void StartLevel2() {
+		sceneToStart = 2;
+		StartButtonClicked ();
+	}
+
+	public void StartLevel3() {
+		sceneToStart = 3;
+		StartButtonClicked ();
+	}
+
+	public void StartMainMenu() {
+		SceneManager.LoadScene (0);
+		//sceneToStart = 0;
+		//StartButtonClicked ();
+	}
 
 	public void StartButtonClicked()
 	{
@@ -109,7 +135,6 @@ public class StartOptions : MonoBehaviour {
 		Invoke("HideDelayed", fadeAlphaAnimationClip.length);
 		Debug.Log ("Game started in same scene! Put your game starting stuff here.");
 	}
-
 
 	public void PlayNewMusic()
 	{
