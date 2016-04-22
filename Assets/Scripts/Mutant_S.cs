@@ -7,6 +7,7 @@ public class Mutant_S : MonoBehaviour
     public Animator ani;
 
     public Rigidbody rbody;
+
     private Quaternion qTo;
     public float speed = 2.0f;
 
@@ -16,14 +17,14 @@ public class Mutant_S : MonoBehaviour
     {
         ani = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody>();
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
         ani.SetFloat("inputV", Input.GetAxis("Horizontal"));
-        
+
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
 
         if (direction != Vector2.zero)
