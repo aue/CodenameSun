@@ -9,9 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 406726}
   - 114: {fileID: 11486100}
+  - 114: {fileID: 11477694}
   m_Layer: 0
   m_Name: CharacterManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,6 +29,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11477694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480385e74d26c421ab4e9e30655a9169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 1000, y: 1000, z: 1000}
+  resetPosition: {x: 1000, y: 1000, z: 1000}
 --- !u!114 &11486100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,6 +53,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9061085c7c474fd6bcaa36de5f2a577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameovermsg: {fileID: 0}
+  gameoverbtn: {fileID: 0}
+  healthStat: {fileID: 0}
+  killStat: {fileID: 0}
+  killed: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

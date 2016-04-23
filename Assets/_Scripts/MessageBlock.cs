@@ -10,7 +10,7 @@ public class MessageBlock : MonoBehaviour {
 		//step = GameObject.Find("Step1");
 		step.SetActive(false);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	

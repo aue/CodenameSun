@@ -34,7 +34,7 @@ public class PlayMusic : MonoBehaviour {
 				musicSource.clip = titleMusic;
 				break;
 			//If scene index is 1 (usually main scene) assign the clip mainMusic to musicSource
-			case 1:
+			default:
 				musicSource.clip = mainMusic;
 				break;
 		}

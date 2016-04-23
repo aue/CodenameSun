@@ -40,6 +40,9 @@ public class EveController : Pathfinding {
 
 	bool hasPath;
 	public bool isActivePlayer;
+	private playerHealth health;
+	bool playedDeath;
+	float deathTimer;
 
 	public Quaternion TargetRotation {
 		get { return targetRotation; }
@@ -53,6 +56,8 @@ public class EveController : Pathfinding {
 		forwardInput = depthInput = jumpInput = 0;
 		hasPath = false;
 		isActivePlayer = false;
+		playedDeath = false;
+		deathTimer = 0;
 	}
 
 	private void Start() {
@@ -71,6 +76,11 @@ public class EveController : Pathfinding {
 		}
 		else
 			Debug.LogError ("The character needs an animator.");
+
+		if (GetComponent<playerHealth> ())
+			health = GetComponent<playerHealth> ();
+		else
+			Debug.LogError ("The character needs health.");
 	}
 
 	private void GetInput() {
@@ -80,14 +90,29 @@ public class EveController : Pathfinding {
 	}
 
 	private void Update() {
-		if (isActivePlayer) {
+		if (health.isDead) {
+			// die
+		}
+		else if (isActivePlayer) {
 			GetInput ();
 			Turn ();
 		}
 	}
 
 	private void FixedUpdate() {
-		if (isActivePlayer) {
+		if (health.isDead) {
+			if (!playedDeath) {
+				playedDeath = true;
+				cAnimator.SetInteger ("CurrentAction", 1);
+			} else {
+				deathTimer += Time.deltaTime;
+
+				if (deathTimer > 2.5) {
+					gameObject.SetActive (false);
+				}
+			}
+		}
+		else if (isActivePlayer) {
 			Run ();
 			Jump ();
 
@@ -144,7 +169,7 @@ public class EveController : Pathfinding {
 					float dist = Vector3.Distance (transform.position, Path [0]);
 					transform.position = Vector3.MoveTowards (transform.position, Path [0], Time.deltaTime * 7f);
 
-					Vector3 movement = Vector3.RotateTowards(transform.position, Path [0], Time.deltaTime * 100f, 0.0f);
+					//Vector3 movement = Vector3.RotateTowards(transform.position, Path [0], Time.deltaTime * 100f, 0.0f);
 					body.transform.rotation = Quaternion.LookRotation (Path [0] - transform.position);
 
 					if (dist < 0.5) {
