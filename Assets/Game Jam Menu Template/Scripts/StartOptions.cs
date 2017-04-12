@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-
 public class StartOptions : MonoBehaviour {
 
 	public int sceneToStart = 1;										//Index number in build settings of scene to load if changeScenes is true
@@ -87,18 +86,30 @@ public class StartOptions : MonoBehaviour {
 
 	}
 
-	//Once the level has loaded, check if we want to call PlayLevelMusic
-	void OnLevelWasLoaded()
-	{
-		//if changeMusicOnStart is true, call the PlayLevelMusic function of playMusic
-		if (changeMusicOnStart)
-		{
-			playMusic.PlayLevelMusic ();
-		}	
-	}
+    void OnEnable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    //Once the level has loaded, check if we want to call PlayLevelMusic
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        //if changeMusicOnStart is true, call the PlayLevelMusic function of playMusic
+        if (changeMusicOnStart)
+        {
+            playMusic.PlayLevelMusic();
+        }
+    }
 
 
-	public void LoadDelayed()
+    public void LoadDelayed()
 	{
 		//Pause button now works if escape is pressed since we are no longer in Main menu.
 		inMainMenu = false;

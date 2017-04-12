@@ -39,7 +39,7 @@ public class CharacterManager : MonoBehaviour {
 
 	void Update () {
 		healthStat.GetComponent<Text> ().text = blackMaskHealth.currentHealth + "/" + blackMaskHealth.fullHealth + " Black Mask\n" + eveHealth.currentHealth + "/" + eveHealth.fullHealth + " Eve";
-		killStat.GetComponent<Text> ().text = "Killed " + killed;
+		killStat.GetComponent<Text> ().text = "KO " + killed;
 
 		if (blackMaskHealth.isDead && eveHealth.isDead) {
 			Time.timeScale = 0;

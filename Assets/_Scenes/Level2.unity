@@ -1,30 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
-SceneSettings:
+OcclusionCullingSettings:
   m_ObjectHideFlags: 0
-  m_PVSData: 
-  m_PVSObjectsArray: []
-  m_PVSPortalsArray: []
+  serializedVersion: 2
   m_OcclusionBakeSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 6
+  serializedVersion: 8
   m_Fog: 1
   m_FogColor: {r: 0.058823526, g: 0.04757785, b: 0.03070934, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.04
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.1484, g: 0.1589, b: 0.1813, a: 0.7}
+  m_AmbientEquatorColor: {r: 0.0798, g: 0.0875, b: 0.0931, a: 0.7}
+  m_AmbientGroundColor: {r: 0.032899998, g: 0.030100001, b: 0.0245, a: 0.7}
   m_AmbientIntensity: 0.7
   m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: bf1bf92a3ce592e40b898be6c21cc2fa, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -37,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2033659713}
+  m_IndirectSpecularColor: {r: 0.09208802, g: 0.14194506, b: 0.18347651, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 6
+  serializedVersion: 9
   m_GIWorkflowMode: 0
-  m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -53,48 +54,70 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 3
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
     m_TextureHeight: 1024
+    m_AO: 0
     m_AOMaxDistance: 1
-    m_Padding: 2
     m_CompAOExponent: 0
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
     m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
+    m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFiltering: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_RuntimeCPUUsage: 25
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
+    agentTypeID: 0
     agentRadius: 0.2
     agentHeight: 2
     agentSlope: 55
     agentClimb: 0.5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    accuratePlacement: 0
     minRegionArea: 2
-    cellSize: 0.06666667
     manualCellSize: 0
+    cellSize: 0.06666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
   m_NavMeshData: {fileID: 23800000, guid: 45e4bc8eed0a24f94996e03a579862ce, type: 2}
 --- !u!1 &27994632
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100030, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 27994633}
-  - 33: {fileID: 27994635}
-  - 23: {fileID: 27994634}
+  - component: {fileID: 27994633}
+  - component: {fileID: 27994635}
+  - component: {fileID: 27994634}
   m_Layer: 0
   m_Name: AircraftWingsJetSlatRight
   m_TagString: Untagged
@@ -114,6 +137,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &27994634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124,22 +148,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 42672579dbdf2c8449598d21e2c569ec, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &27994635
 MeshFilter:
@@ -569,14 +599,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2abe2db222fa9c49a111c088001ebcf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &149551119 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 169112, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+  m_PrefabInternal: {fileID: 494686545}
 --- !u!1 &154015865
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 154015866}
+  - component: {fileID: 154015866}
   m_Layer: 8
   m_Name: Enemies
   m_TagString: Untagged
@@ -604,14 +638,15 @@ Transform:
   - {fileID: 723902935}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155957931
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 155957932}
+  - component: {fileID: 155957932}
   m_Layer: 0
   m_Name: Messages
   m_TagString: Untagged
@@ -636,18 +671,19 @@ Transform:
   - {fileID: 195071095}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195071091
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 195071095}
-  - 33: {fileID: 195071094}
-  - 65: {fileID: 195071093}
-  - 114: {fileID: 195071092}
-  - 114: {fileID: 195071096}
+  - component: {fileID: 195071095}
+  - component: {fileID: 195071094}
+  - component: {fileID: 195071093}
+  - component: {fileID: 195071092}
+  - component: {fileID: 195071096}
   m_Layer: 2
   m_Name: Tut_Complete
   m_TagString: Untagged
@@ -698,6 +734,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155957932}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &195071096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,11 +856,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100032, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 221734279}
-  - 33: {fileID: 221734281}
-  - 23: {fileID: 221734280}
+  - component: {fileID: 221734279}
+  - component: {fileID: 221734281}
+  - component: {fileID: 221734280}
   m_Layer: 0
   m_Name: AircraftWingsJetSlatLeft
   m_TagString: Untagged
@@ -843,6 +880,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &221734280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -853,22 +891,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 42672579dbdf2c8449598d21e2c569ec, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &221734281
 MeshFilter:
@@ -953,9 +997,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 286684219}
+  - component: {fileID: 286684219}
   m_Layer: 0
   m_Name: Forest Scene
   m_TagString: Untagged
@@ -982,6 +1026,7 @@ Transform:
   - {fileID: 1233288241}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &311823961
 Prefab:
   m_ObjectHideFlags: 0
@@ -1041,9 +1086,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 349790532}
+  - component: {fileID: 349790532}
   m_Layer: 0
   m_Name: Jet Crash
   m_TagString: Untagged
@@ -1066,16 +1111,17 @@ Transform:
   - {fileID: 894908148}
   m_Father: {fileID: 754716342}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358590283
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100068, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 358590284}
-  - 33: {fileID: 358590286}
-  - 23: {fileID: 358590285}
+  - component: {fileID: 358590284}
+  - component: {fileID: 358590286}
+  - component: {fileID: 358590285}
   m_Layer: 0
   m_Name: AircraftWingsJetAileronRight
   m_TagString: Untagged
@@ -1095,6 +1141,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &358590285
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1105,22 +1152,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &358590286
 MeshFilter:
@@ -1135,11 +1188,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 408231221}
-  - 65: {fileID: 408231219}
-  - 114: {fileID: 408231222}
+  - component: {fileID: 408231221}
+  - component: {fileID: 408231219}
+  - component: {fileID: 408231222}
   m_Layer: 2
   m_Name: Tut_toMove
   m_TagString: Untagged
@@ -1171,6 +1224,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155957932}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &408231222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,7 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d054b491104e4e2a92882640a6a8233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: {fileID: 0}
+  step: {fileID: 575025796}
 --- !u!4 &409854644 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7ca168569b7f1c5479b28f521d0a1a32, type: 2}
@@ -1196,11 +1250,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100070, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 423657404}
-  - 33: {fileID: 423657406}
-  - 23: {fileID: 423657405}
+  - component: {fileID: 423657404}
+  - component: {fileID: 423657406}
+  - component: {fileID: 423657405}
   m_Layer: 0
   m_Name: AircraftWingsJetAileronLeft
   m_TagString: Untagged
@@ -1220,6 +1274,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &423657405
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1230,22 +1285,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &423657406
 MeshFilter:
@@ -1532,6 +1593,58 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayLevel3
       objectReference: {fileID: 0}
+    - target: {fileID: 11439886, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_Text
+      value: KO 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22458200, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412504, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425978, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461866, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477884, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22496994, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 22408920, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432524, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 22437590, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470160, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475370, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435438, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+      propertyPath: m_Text
+      value: Avoid the robots!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
   m_IsPrefabParent: 0
@@ -1560,11 +1673,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 538893655}
-  - 114: {fileID: 538893654}
-  - 114: {fileID: 538893653}
+  - component: {fileID: 538893655}
+  - component: {fileID: 538893654}
+  - component: {fileID: 538893653}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1616,6 +1729,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544728490
 Prefab:
   m_ObjectHideFlags: 0
@@ -1670,6 +1784,83 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ca168569b7f1c5479b28f521d0a1a32, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &575025796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 169112, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 575025797}
+  - component: {fileID: 575025799}
+  - component: {fileID: 575025798}
+  m_Layer: 5
+  m_Name: StepMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &575025797
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22477884, guid: 9979fc960db5c46ac9c61f527518cc4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575025796}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1844048408}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 30}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &575025798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11435438, guid: 9979fc960db5c46ac9c61f527518cc4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575025796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 7
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: To move, use the arrow keys.
+--- !u!222 &575025799
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22224894, guid: 9979fc960db5c46ac9c61f527518cc4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575025796}
 --- !u!1001 &575925992
 Prefab:
   m_ObjectHideFlags: 0
@@ -1787,11 +1978,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100064, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 587795154}
-  - 33: {fileID: 587795156}
-  - 23: {fileID: 587795155}
+  - component: {fileID: 587795154}
+  - component: {fileID: 587795156}
+  - component: {fileID: 587795155}
   m_Layer: 0
   m_Name: AircraftWingsJetDoorLeftRear
   m_TagString: Untagged
@@ -1811,6 +2002,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &587795155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1821,22 +2013,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 42672579dbdf2c8449598d21e2c569ec, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &587795156
 MeshFilter:
@@ -1851,9 +2049,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 634085529}
+  - component: {fileID: 634085529}
   m_Layer: 0
   m_Name: waypoint
   m_TagString: Untagged
@@ -1873,6 +2071,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &636231955 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 36c9c4e85a6903044bce22d0ee162636, type: 3}
@@ -1956,12 +2155,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 657337496}
-  - 33: {fileID: 657337495}
-  - 135: {fileID: 657337494}
-  - 23: {fileID: 657337493}
+  - component: {fileID: 657337496}
+  - component: {fileID: 657337495}
+  - component: {fileID: 657337494}
+  - component: {fileID: 657337493}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1978,22 +2177,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: c8dfbb59b2b6bf643a87072f155a01de, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!135 &657337494
 SphereCollider:
@@ -2026,6 +2231,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155957932}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &664297670
 Prefab:
   m_ObjectHideFlags: 0
@@ -2243,11 +2449,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100058, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 741047267}
-  - 33: {fileID: 741047269}
-  - 23: {fileID: 741047268}
+  - component: {fileID: 741047267}
+  - component: {fileID: 741047269}
+  - component: {fileID: 741047268}
   m_Layer: 0
   m_Name: AircraftWingsJetFlapLeft
   m_TagString: Untagged
@@ -2267,6 +2473,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &741047268
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2277,22 +2484,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &741047269
 MeshFilter:
@@ -2361,9 +2574,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 754716342}
+  - component: {fileID: 754716342}
   m_Layer: 0
   m_Name: Jet Scene
   m_TagString: Untagged
@@ -2388,6 +2601,7 @@ Transform:
   - {fileID: 349790532}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &756973908 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0d195c0b730647745af47bd4e3ac8616, type: 2}
@@ -2641,11 +2855,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100062, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1017180216}
-  - 33: {fileID: 1017180218}
-  - 23: {fileID: 1017180217}
+  - component: {fileID: 1017180216}
+  - component: {fileID: 1017180218}
+  - component: {fileID: 1017180217}
   m_Layer: 0
   m_Name: AircraftWingsJetDoorRightFront
   m_TagString: Untagged
@@ -2665,6 +2879,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1017180217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2675,22 +2890,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1017180218
 MeshFilter:
@@ -2803,9 +3024,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100092, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1039408442}
+  - component: {fileID: 1039408442}
   m_Layer: 0
   m_Name: AircraftFuselage
   m_TagString: Untagged
@@ -2830,6 +3051,7 @@ Transform:
   - {fileID: 1786284223}
   m_Father: {fileID: 1194761218}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1062844123
 Prefab:
   m_ObjectHideFlags: 0
@@ -2963,9 +3185,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100010, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1194761218}
+  - component: {fileID: 1194761218}
   m_Layer: 8
   m_Name: AircraftJet
   m_TagString: Untagged
@@ -2987,6 +3209,7 @@ Transform:
   - {fileID: 1900934696}
   m_Father: {fileID: 349790532}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1197504613
 Prefab:
   m_ObjectHideFlags: 0
@@ -3049,16 +3272,20 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7ca168569b7f1c5479b28f521d0a1a32, type: 2}
   m_PrefabInternal: {fileID: 544728490}
+--- !u!1 &1257369061 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144170, guid: 9979fc960db5c46ac9c61f527518cc4f, type: 2}
+  m_PrefabInternal: {fileID: 494686545}
 --- !u!1 &1262877886
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100084, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1262877887}
-  - 33: {fileID: 1262877889}
-  - 23: {fileID: 1262877888}
+  - component: {fileID: 1262877887}
+  - component: {fileID: 1262877889}
+  - component: {fileID: 1262877888}
   m_Layer: 0
   m_Name: AircraftFuselageGearDoorRight
   m_TagString: Untagged
@@ -3078,6 +3305,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039408442}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1262877888
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3088,22 +3316,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 141b5bb76b8b39342a5a787acbeaabfd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1262877889
 MeshFilter:
@@ -3118,11 +3352,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100026, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1289390770}
-  - 33: {fileID: 1289390772}
-  - 23: {fileID: 1289390771}
+  - component: {fileID: 1289390770}
+  - component: {fileID: 1289390772}
+  - component: {fileID: 1289390771}
   m_Layer: 0
   m_Name: AircraftWingsJetWing
   m_TagString: Untagged
@@ -3142,6 +3376,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1289390771
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3152,22 +3387,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 8faba1f5a0ad1ac4a80921e7fb6aad98, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1289390772
 MeshFilter:
@@ -3240,11 +3481,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100082, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1365437583}
-  - 33: {fileID: 1365437585}
-  - 23: {fileID: 1365437584}
+  - component: {fileID: 1365437583}
+  - component: {fileID: 1365437585}
+  - component: {fileID: 1365437584}
   m_Layer: 0
   m_Name: AircraftFuselageRudderLeft
   m_TagString: Untagged
@@ -3264,6 +3505,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039408442}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1365437584
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3274,22 +3516,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1365437585
 MeshFilter:
@@ -3304,11 +3552,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1371355948}
-  - 218: {fileID: 1371355947}
-  - 154: {fileID: 1371355946}
+  - component: {fileID: 1371355948}
+  - component: {fileID: 1371355947}
+  - component: {fileID: 1371355946}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -3369,6 +3617,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1374500259 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 36c9c4e85a6903044bce22d0ee162636, type: 3}
@@ -3484,11 +3733,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100088, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1428674368}
-  - 33: {fileID: 1428674370}
-  - 23: {fileID: 1428674369}
+  - component: {fileID: 1428674368}
+  - component: {fileID: 1428674370}
+  - component: {fileID: 1428674369}
   m_Layer: 0
   m_Name: AircraftFuselageGearDoorLeft
   m_TagString: Untagged
@@ -3508,6 +3757,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039408442}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1428674369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3518,22 +3768,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 141b5bb76b8b39342a5a787acbeaabfd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1428674370
 MeshFilter:
@@ -3792,9 +4048,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1509850059}
+  - component: {fileID: 1509850059}
   m_Layer: 0
   m_Name: JumpOvers
   m_TagString: Untagged
@@ -3817,6 +4073,7 @@ Transform:
   - {fileID: 1072986431}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1518215604
 Prefab:
   m_ObjectHideFlags: 0
@@ -3918,9 +4175,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1572028027}
+  - component: {fileID: 1572028027}
   m_Layer: 0
   m_Name: waypoint (1)
   m_TagString: Untagged
@@ -3940,6 +4197,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1578383148
 Prefab:
   m_ObjectHideFlags: 0
@@ -4347,11 +4605,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100050, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1736687628}
-  - 33: {fileID: 1736687630}
-  - 23: {fileID: 1736687629}
+  - component: {fileID: 1736687628}
+  - component: {fileID: 1736687630}
+  - component: {fileID: 1736687629}
   m_Layer: 0
   m_Name: AircraftWingsJetFlapRight
   m_TagString: Untagged
@@ -4371,6 +4629,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1736687629
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4381,22 +4640,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1736687630
 MeshFilter:
@@ -4465,11 +4730,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100080, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1786284223}
-  - 33: {fileID: 1786284225}
-  - 23: {fileID: 1786284224}
+  - component: {fileID: 1786284223}
+  - component: {fileID: 1786284225}
+  - component: {fileID: 1786284224}
   m_Layer: 0
   m_Name: AircraftFuselageRudderRight
   m_TagString: Untagged
@@ -4489,6 +4754,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039408442}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1786284224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4499,22 +4765,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1786284225
 MeshFilter:
@@ -4648,6 +4920,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8264ead123bda495dbf82f60e386b9e8, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1844048408 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22448118, guid: 9979fc960db5c46ac9c61f527518cc4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 494686545}
 --- !u!4 &1855693421 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e2abe2db222fa9c49a111c088001ebcf, type: 2}
@@ -4758,11 +5035,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100060, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1888677617}
-  - 33: {fileID: 1888677619}
-  - 23: {fileID: 1888677618}
+  - component: {fileID: 1888677617}
+  - component: {fileID: 1888677619}
+  - component: {fileID: 1888677618}
   m_Layer: 0
   m_Name: AircraftWingsJetDoorRightRear
   m_TagString: Untagged
@@ -4782,6 +5059,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1888677618
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4792,22 +5070,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1888677619
 MeshFilter:
@@ -4822,12 +5106,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1893832831}
-  - 33: {fileID: 1893832830}
-  - 65: {fileID: 1893832829}
-  - 114: {fileID: 1893832828}
+  - component: {fileID: 1893832831}
+  - component: {fileID: 1893832830}
+  - component: {fileID: 1893832829}
+  - component: {fileID: 1893832828}
   m_Layer: 2
   m_Name: Tut_Jump
   m_TagString: Untagged
@@ -4846,7 +5130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d054b491104e4e2a92882640a6a8233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: {fileID: 0}
+  step: {fileID: 1257369061}
 --- !u!65 &1893832829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4878,6 +5162,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155957932}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1897787795 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 36c9c4e85a6903044bce22d0ee162636, type: 3}
@@ -4887,9 +5172,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100072, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1900934696}
+  - component: {fileID: 1900934696}
   m_Layer: 0
   m_Name: AircraftWingsJet
   m_TagString: Untagged
@@ -4920,6 +5205,7 @@ Transform:
   - {fileID: 1289390770}
   m_Father: {fileID: 1194761218}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1911517986 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 48aab90d7099e38428e69512f29b7c60, type: 2}
@@ -4929,11 +5215,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100066, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1918713471}
-  - 33: {fileID: 1918713473}
-  - 23: {fileID: 1918713472}
+  - component: {fileID: 1918713471}
+  - component: {fileID: 1918713473}
+  - component: {fileID: 1918713472}
   m_Layer: 0
   m_Name: AircraftWingsJetDoorLeftFront
   m_TagString: Untagged
@@ -4953,6 +5239,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1900934696}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1918713472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4963,22 +5250,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 42672579dbdf2c8449598d21e2c569ec, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &1918713473
 MeshFilter:
@@ -5194,9 +5487,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2026594702}
+  - component: {fileID: 2026594702}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -5222,14 +5515,15 @@ Transform:
   - {fileID: 521964667}
   m_Father: {fileID: 286684219}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030637164
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2030637165}
+  - component: {fileID: 2030637165}
   m_Layer: 0
   m_Name: Skywalk
   m_TagString: Untagged
@@ -5266,15 +5560,16 @@ Transform:
   - {fileID: 2014074076}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2033659712
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2033659714}
-  - 108: {fileID: 2033659713}
+  - component: {fileID: 2033659714}
+  - component: {fileID: 2033659713}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5289,7 +5584,7 @@ Light:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2033659712}
   m_Enabled: 1
-  serializedVersion: 6
+  serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.2
@@ -5299,6 +5594,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
+    m_CustomResolution: -1
     m_Strength: 0.5
     m_Bias: 0.05
     m_NormalBias: 1
@@ -5311,10 +5607,12 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 4.3
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
 --- !u!4 &2033659714
 Transform:
   m_ObjectHideFlags: 0
@@ -5327,6 +5625,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2035184570 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 36c9c4e85a6903044bce22d0ee162636, type: 3}
@@ -5363,11 +5662,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100090, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2075433054}
-  - 33: {fileID: 2075433056}
-  - 23: {fileID: 2075433055}
+  - component: {fileID: 2075433054}
+  - component: {fileID: 2075433056}
+  - component: {fileID: 2075433055}
   m_Layer: 0
   m_Name: AircraftFuselageBody
   m_TagString: Untagged
@@ -5387,6 +5686,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039408442}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2075433055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5397,22 +5697,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 3e7b594893498ec42932503e8327d53c, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &2075433056
 MeshFilter:
@@ -5431,11 +5737,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2127565863}
-  - 65: {fileID: 2127565861}
-  - 114: {fileID: 2127565860}
+  - component: {fileID: 2127565863}
+  - component: {fileID: 2127565861}
+  - component: {fileID: 2127565860}
   m_Layer: 2
   m_Name: Tut_Avoid
   m_TagString: Untagged
@@ -5454,7 +5760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d054b491104e4e2a92882640a6a8233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: {fileID: 0}
+  step: {fileID: 149551119}
 --- !u!65 &2127565861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5479,6 +5785,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 155957932}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2144164232 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7aa6cb432038d7c48a82b9395843536a, type: 2}

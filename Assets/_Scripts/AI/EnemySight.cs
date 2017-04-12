@@ -8,7 +8,7 @@ public class EnemySight : MonoBehaviour
     public Vector3 personalLastSighting;            // Last place this enemy spotted the player.
 
 
-    private NavMeshAgent nav;                       // Reference to the NavMeshAgent component.
+    private UnityEngine.AI.NavMeshAgent nav;                       // Reference to the NavMeshAgent component.
     private SphereCollider col;                     // Reference to the sphere collider trigger component.
     private Animator anim;                          // Reference to the Animator.
     private LastPlayerSighting lastPlayerSighting;  // Reference to last global sighting of the player.
@@ -22,7 +22,7 @@ public class EnemySight : MonoBehaviour
     void Awake()
     {
         // Setting up the references.
-        nav = GetComponent<NavMeshAgent>();
+        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         col = GetComponent<SphereCollider>();
         Debug.Log("col radius is " + col.radius);
         anim = GetComponent<Animator>();

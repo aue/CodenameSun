@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public Transform[] patrolWayPoints;                     // An array of transforms for the patrol route.
 
     private EnemySight enemySight;
-    private NavMeshAgent nav;
+    private UnityEngine.AI.NavMeshAgent nav;
     private Transform player;
     private GameObject enemy;
     private Animator myAnimator;
@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
         // Setting up the references.
         enemySight = GetComponent<EnemySight>();
         //enemy = GameObject.FindGameObjectWithTag("enemy");
-        nav = GetComponent<NavMeshAgent>();
+        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //playerHealth = player.GetComponent<PlayerHealth>();
         lastPlayerSighting = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<LastPlayerSighting>();
